@@ -1,4 +1,7 @@
-﻿using AtividadeLivros;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using AtividadeLivros;
 
 
 
@@ -38,12 +41,14 @@ livro.Add(new Book(){
     NumeroPaginas = 152,
 });
 
-Book MaisPaginas = livro.OrderByDescending(1 => 1.NumeroPaginas).First();
-{
+Book MaisPaginas = livro.OrderByDescending(l => l.NumeroPaginas).FirstOrDefault()!;
+
+    if (MaisPaginas != null)
+    {
     Console.WriteLine("Livro com o maior número de paginas:");
     Console.WriteLine($"Nome: {MaisPaginas.Nome}");
     Console.WriteLine($"Editora: {MaisPaginas.Editora}");
     Console.WriteLine($"Autor: {MaisPaginas.Autor}");
     Console.WriteLine($"Numero de páginas: {MaisPaginas.NumeroPaginas}");
 
-}
+    }   
