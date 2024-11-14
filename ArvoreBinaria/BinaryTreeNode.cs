@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -9,7 +10,7 @@ namespace ArvoreBinaria
     {
         public BinaryTreeNode()
         {
-            base.Children = new List<TreeNode<T>>();
+            Children = new List<TreeNode<T>>();
         }
 
         public BinaryTreeNode<T> Left 
@@ -23,5 +24,10 @@ namespace ArvoreBinaria
             get { return (BinaryTreeNode<T>)Children[1]; }
             set { Children[1] = value;}
         }
+
+
+
+        
     }
 }
+    
