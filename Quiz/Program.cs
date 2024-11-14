@@ -8,7 +8,7 @@ using Quiz;
  static void Main(string[] args)
  {
     BinaryTree<QuizItem> tree = GetTree();
-    BinaryTreeNode<QuizItem> node = tree.Root;
+    BinaryTreeNode<QuizItem> node = tree.Root!;
     while (node != null)
     {
         if (node.Left != null || node.Right != null)
@@ -18,7 +18,7 @@ using Quiz;
             {
                 case ConsoleKey.Y:
                     WriteAnswer(" Yes");
-                    node = node.Left;
+                    node = node.Left!;
                     break;
                 case ConsoleKey.N:
                     WriteAnswer(" No");
@@ -29,7 +29,7 @@ using Quiz;
         else
         {
             WriteAnswer(node.Data.Text);
-            node = null;
+            node = null!;
         }  
     }
  }

@@ -7,7 +7,7 @@ namespace Quiz
 {
     public class BinaryTree<T>
     {
-        public BinaryTreeNode<T> Root { get; set; }
+        public BinaryTreeNode<T>? Root { get; set; }
         public int Count { get; set; }
 
          public enum TraversalEnum
@@ -63,15 +63,15 @@ namespace Quiz
             switch(mode)
             {
                     case TraversalEnum.PREORDER : 
-                        TraversePreOrder (Root, nodes);
+                        TraversePreOrder (Root!, nodes);
                     break;
 
                     case TraversalEnum.POSTORDER : 
-                        TraversePreOrder (Root, nodes);
+                        TraversePreOrder (Root!, nodes);
                     break;
 
                     case TraversalEnum.INORDER : 
-                        TraversePreOrder (Root, nodes);
+                        TraversePreOrder (Root!, nodes);
                     break;
             }
             return nodes;
